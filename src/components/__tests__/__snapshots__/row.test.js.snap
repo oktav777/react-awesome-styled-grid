@@ -17,36 +17,36 @@ exports[`<Row /> should render default style correctly 1`] = `
 
 @media only screen and (min-width:1rem) {
   .c0 {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-inline-start: -0.5rem;
+    margin-inline-end: -0.5rem;
   }
 }
 
 @media only screen and (min-width:48rem) {
   .c0 {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-inline-start: -0.5rem;
+    margin-inline-end: -0.5rem;
   }
 }
 
 @media only screen and (min-width:64rem) {
   .c0 {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+    margin-inline-start: -0.75rem;
+    margin-inline-end: -0.75rem;
   }
 }
 
 @media only screen and (min-width:90rem) {
   .c0 {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+    margin-inline-start: -0.75rem;
+    margin-inline-end: -0.75rem;
   }
 }
 
 @media only screen and (min-width:120rem) {
   .c0 {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+    margin-inline-start: -0.75rem;
+    margin-inline-end: -0.75rem;
   }
 }
 

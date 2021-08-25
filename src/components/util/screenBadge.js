@@ -11,8 +11,8 @@ const ScreenBadge = styled.div`
     position: fixed;
     font-size: 1.5rem;
     font-weight: bold;
-    right: 10px;
-    bottom: 10px;
+    inset-inline-end: 10px;
+    inset-block-end: 10px;
     width: 50px;
     height: 30px;
     background-color: #5901ad40;

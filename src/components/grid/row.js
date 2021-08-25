@@ -7,14 +7,14 @@ const Row = styled.div`
   display: flex;
   flex: 1 1 auto;
   flex-wrap: wrap;
-  
+
   ${p => css`
     ${DIMENSIONS.map(
       d =>
         config(p).container[d] &&
         config(p).media[d]`
-      margin-left: -${config(p).gutterWidth[d] / 2}rem;
-      margin-right: -${config(p).gutterWidth[d] / 2}rem;
+      margin-inline-start: -${config(p).gutterWidth[d] / 2}rem;
+      margin-inline-end: -${config(p).gutterWidth[d] / 2}rem;
     `,
     )}
   `}
@@ -38,7 +38,7 @@ const Row = styled.div`
                  flex-wrap: wrap;
                `
          };
-        
+
       `,
           )
         : `
@@ -58,7 +58,7 @@ const Row = styled.div`
           )
         : `align-items: ${p.align};`}
     `}
-  
+
   ${p =>
     p.justify &&
     css`

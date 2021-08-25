@@ -12,8 +12,8 @@ const Col = styled.div`
   ${p => !p.noGutter && css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      padding-right: ${config(p).gutterWidth[d] / 2}rem;
-      padding-left: ${config(p).gutterWidth[d] / 2}rem;
+      padding-inline-start: ${config(p).gutterWidth[d] / 2}rem;
+      padding-inline-end: ${config(p).gutterWidth[d] / 2}rem;
     `)}
   `}
 
@@ -29,8 +29,8 @@ const Col = styled.div`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
     ${typeof p.offset === 'object'
-    ? p.offset[d] !== undefined && `margin-left: ${p.offset[d] > 0 ? (p.offset[d] / config(p).columns[d]) * 100 : 0}%`
-    : `margin-left: ${(p.offset / config(p).columns['xs']) * 100}%`};
+    ? p.offset[d] !== undefined && `margin-inline-start: ${p.offset[d] > 0 ? (p.offset[d] / config(p).columns[d]) * 100 : 0}%`
+    : `margin-inline-start: ${(p.offset / config(p).columns['xs']) * 100}%`};
     `)}
   `}
 
@@ -56,13 +56,13 @@ const Col = styled.div`
     ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.align[d] && `align-items: ${p.align[d]}`}`)
     : `align-items: ${p.align};`}
   `}
-  
+
   ${p => p.justify && css`
     ${typeof p.justify === 'object'
     ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.justify[d] && `justify-content: ${p.justify[d]}`}`)
     : `justify-content: ${p.justify};`}
   `}
-  
+
   ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;

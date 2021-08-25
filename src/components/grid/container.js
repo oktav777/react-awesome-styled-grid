@@ -8,19 +8,19 @@ import config, {
 } from '../../config'
 
 const Container = styled.div`
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   max-width: 100%;
   box-sizing: border-box;
 
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-      padding-left: ${config(p).paddingWidth[ d ]}rem;
-      padding-right: ${config(p).paddingWidth[ d ]}rem;
+      padding-inline-start: ${config(p).paddingWidth[ d ]}rem;
+      padding-inline-end: ${config(p).paddingWidth[ d ]}rem;
     `)}
   `}
-  
+
 
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>

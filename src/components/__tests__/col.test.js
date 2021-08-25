@@ -13,8 +13,8 @@ describe('<Col />', () => {
   it('should have no gutter', () => {
     const tree = renderer.create(<Col noGutter />).toJSON()
 
-    expect(tree).toHaveStyleRule('padding-right', undefined)
-    expect(tree).toHaveStyleRule('padding-left', undefined)
+    expect(tree).toHaveStyleRule('padding-inline-end', undefined)
+    expect(tree).toHaveStyleRule('padding-inline-start', undefined)
   })
 
   it('should have default gutter', () => {
@@ -28,8 +28,8 @@ describe('<Col />', () => {
       }
 
       const defaultGutter = `${gutterWidth[d] / 2}rem`
-      expect(tree).toHaveStyleRule('padding-right', defaultGutter, media)
-      expect(tree).toHaveStyleRule('padding-left', defaultGutter, media)
+      expect(tree).toHaveStyleRule('padding-inline-end', defaultGutter, media)
+      expect(tree).toHaveStyleRule('padding-inline-start', defaultGutter, media)
     })
   })
 
@@ -75,7 +75,7 @@ describe('<Col />', () => {
 
     DIMENSIONS.forEach(d => {
       expect(tree).toHaveStyleRule(
-        'margin-left', `${props.offset[d] / columns[d] * 100}%`, {
+        'margin-inline-start', `${props.offset[d] / columns[d] * 100}%`, {
           media: `only screen and (min-width: ${breakpoints[d]}rem)`
         }
       )
